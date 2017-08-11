@@ -1,5 +1,5 @@
 /*
-Change by PengWu on 2017-08-04 11:50:31
+Change by PengWu on 2017-08-07 17:21:38
 */
 body, input[type=text], textarea, input[type=submit], input[type=button], button {
   font-family: PingFang SC Regular, Microsoft Yahei, Arial;
@@ -81,7 +81,7 @@ a {
   float: right;
 }
 
-.main, .question-list li, .page {
+.main, .filter, .question-list li, .page {
   overflow: hidden;
   display: -moz-box;
   display: -ms-flexbox;
@@ -100,28 +100,37 @@ a {
   flex-flow: row wrap;
 }
 
-.main .bar, .main .container, .question-list .source, .question-list .content, .question-list .classify, .question-list .status, .question-list .operation, .page li {
+.main .bar, .filter .property, .filter .date, .question-list .source, .question-list .content, .question-list .classify, .question-list .status, .question-list .operation, .page li {
   flex: none;
   align-self: center;
 }
 
-.header .name, .header .exit, .main, .main .top-list .top-title, .main .top-list .top-title .text, .question-list .identity {
+.main .container {
+  flex: auto;
+  align-self: center;
+}
+
+.header .name, .header .exit, .main, .main .top-list .top-title, .main .top-list .top-title .text, .filter .select, .question-list .identity {
   position: relative;
 }
 
-.header .name:before, .header .exit:before, .main .top-list .top-title:before, .main .top-list .top-title .text:after, .question-list .identity:after, .image:after, .page {
+.header .name:before, .header .exit:before, .main .top-list .top-title:before, .main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after, .image:after, .filter .list, .page {
   position: absolute;
 }
 
-.main .top-list .second-title, .question-list .operation .btn, .page li {
+.main .top-list .second-title, .filter .date .split, .question-list .operation .btn, .page li {
   text-align: center;
 }
 
-.page li, .page .ellipsis {
+.filter {
+  font-size: 0px;
+}
+
+.filter .date .select, .page li, .page .ellipsis {
   font-size: 12px;
 }
 
-.main .top-list .second-title, .question-list .source, .question-list .content, .question-list .operation .btn {
+.main .top-list .second-title, .filter .name, .filter .select, .filter .date .split, .question-list .source, .question-list .content, .question-list .operation .btn {
   font-size: 14px;
 }
 
@@ -133,11 +142,11 @@ a {
   font-size: 18px;
 }
 
-.header .title, .main .top-list .top-title, .question-list .equipment {
+.header .title, .main .top-list .top-title, .filter .name, .filter .date .split, .question-list .equipment {
   font-weight: normal;
 }
 
-.main .container {
+.main .container, .filter .list {
   background-color: #ffffff;
 }
 
@@ -165,11 +174,11 @@ a {
   color: #ffffff;
 }
 
-.question-list .version, .question-list .info {
+.filter .select, .question-list .version, .question-list .info {
   color: #999999;
 }
 
-.question-list .equipment, .question-list .text, .page a, .page .ellipsis {
+.filter .name, .filter .date .split, .question-list .equipment, .question-list .text, .page a, .page .ellipsis {
   color: #3a3a3a;
 }
 
@@ -183,8 +192,12 @@ a {
   content: '';
 }
 
-.main .top-list .top-title .text:after, .question-list .identity:after {
+.main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after {
   content: '';
+}
+
+body {
+  min-width: 1200px;
 }
 
 .alpha {
@@ -327,6 +340,105 @@ a {
   width: 89.16666666666667%;
   height: 100%;
   padding: 30px;
+}
+
+.filter {
+  overflow: visible;
+}
+
+.filter:first-child {
+  margin-top: 30px;
+}
+
+.filter:nth-child(2) {
+  margin: 20px 0;
+}
+
+.filter .name {
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+}
+
+.filter .select {
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+  border: 1px solid #e0e0e0;
+  z-index: 1;
+}
+
+.filter .select:after {
+  top: 50%;
+  right: 5px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 4px solid #999999;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.filter .select .text {
+  padding-left: 10px;
+}
+
+.filter .list {
+  top: 34px;
+  left: -1px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+.filter .list li {
+  padding-left: 10px;
+}
+
+.filter .property {
+  width: 47.526%;
+}
+
+.filter .property .name {
+  width: 5.834%;
+}
+
+.filter .property .select {
+  width: 21.042%;
+  margin-left: 2.084%;
+}
+
+.filter .date {
+  width: 30.892%;
+  margin-left: 1.981%;
+}
+
+.filter .date .name {
+  width: 20.513%;
+}
+
+.filter .date .select {
+  width: 33.975%;
+}
+
+.filter .date .split {
+  display: inline-block;
+  width: 10.26%;
+  height: 35px;
+  line-height: 35px;
+}
+
+.filter .classify {
+  width: 39.11%;
+}
+
+.filter .classify .name {
+  width: 14.18%;
+}
+
+.filter .classify .select {
+  width: 25.57%;
+  margin-left: 2.532%;
 }
 
 .question-list li {
