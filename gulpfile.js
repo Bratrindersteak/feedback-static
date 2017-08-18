@@ -5,7 +5,6 @@ var watch = require('gulp-watch');
 var uglify = require('gulp-uglify');
 var banner = require('gulp-banner');
 var base64 = require('gulp-base64');
-var base64img = require('gulp-base64-img');
 var spriter = require('gulp-css-spriter');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');

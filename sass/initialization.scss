@@ -549,6 +549,18 @@ $img-prefix: '../../';
 	background-color: #dd5a58;
 }
 
+%bkgf5f6f8 {
+	background-color: #f5f6f8;
+}
+
+%bkgfffde1 {
+	background-color: #fffde1;
+}
+
+%bkgffd65a {
+	background-color: #ffd65a;
+}
+
 %colorbebebe {
 	color: #bebebe;
 }
@@ -743,6 +755,12 @@ $img-prefix: '../../';
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+}
+
+%unbox-sizing {
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 }
 
 %before {
