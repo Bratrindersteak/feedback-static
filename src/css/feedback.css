@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
 Change by PengWu on 2017-08-16 16:00:04
+=======
+Change by PengWu on 2017-08-18 17:09:13
+>>>>>>> 132968e31ad88ef88db6bd050fa3c211e4ad69ed
 */
 body, input[type=text], textarea, input[type=submit], input[type=button], button {
   font-family: PingFang SC Regular, Microsoft Yahei, Arial;
@@ -110,11 +114,11 @@ a {
   align-self: center;
 }
 
-.header .name, .header .exit, .main, .main .top-list .top-title, .main .top-list .top-title .text, .filter .select, .question-list .identity {
+.header .name, .header .exit, .main, .main .top-list .top-title, .main .top-list .top-title .text, .filter .select, .question-list .identity, .popup .title {
   position: relative;
 }
 
-.header .name:before, .header .exit:before, .main .top-list .top-title:before, .main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after, .image:after, .filter .list, .page {
+.header .name:before, .header .exit:before, .main .top-list .top-title:before, .popup .title .close:before, .popup .remark:before, .main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after, .popup .title .close:after, .popup .remark:after, .image:after, .filter .list, .page, .popup, .popup .title .close, .popup .remark {
   position: absolute;
 }
 
@@ -130,7 +134,7 @@ a {
   font-size: 12px;
 }
 
-.main .top-list .second-title, .filter .name, .filter .select, .filter .date .split, .question-list .source, .question-list .content, .question-list .operation .btn {
+.main .top-list .second-title, .filter .name, .filter .select, .filter .date .split, .question-list .source, .question-list .content, .question-list .operation .btn, .popup .remark {
   font-size: 14px;
 }
 
@@ -138,15 +142,15 @@ a {
   font-size: 16px;
 }
 
-.header .title {
+.header .title, .popup .title {
   font-size: 18px;
 }
 
-.header .title, .main .top-list .top-title, .filter .name, .filter .date .split, .question-list .equipment {
+.header .title, .main .top-list .top-title, .filter .name, .filter .date .split, .question-list .equipment, .popup .title {
   font-weight: normal;
 }
 
-.main .container, .filter .list {
+.main .container, .filter .list, .popup, .popup .title .close:before, .popup .title .close:after, .popup .remark:after {
   background-color: #ffffff;
 }
 
@@ -162,7 +166,7 @@ a {
   background-color: #3d434d;
 }
 
-.main .bar {
+.main .bar, .popup .title {
   background-color: #696e76;
 }
 
@@ -170,7 +174,15 @@ a {
   background-color: #dd5a58;
 }
 
-.header .title .link, .header .name, .header .exit, .main .top-list .top-title, .main .top-list .second-title {
+.popup .remark {
+  background-color: #fffde1;
+}
+
+.popup .remark:before {
+  background-color: #ffd65a;
+}
+
+.header .title .link, .header .name, .header .exit, .main .top-list .top-title, .main .top-list .second-title, .popup .title {
   color: #ffffff;
 }
 
@@ -178,21 +190,27 @@ a {
   color: #999999;
 }
 
-.filter .name, .filter .date .split, .question-list .equipment, .question-list .text, .page a, .page .ellipsis {
+.filter .name, .filter .date .split, .question-list .equipment, .question-list .text, .page a, .page .ellipsis, .popup .remark {
   color: #3a3a3a;
 }
 
-.main .container {
+.main .container, .popup, .popup .remark {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
-.header .name:before, .header .exit:before, .main .top-list .top-title:before {
+.popup .title .close {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+.header .name:before, .header .exit:before, .main .top-list .top-title:before, .popup .title .close:before, .popup .remark:before {
   content: '';
 }
 
-.main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after {
+.main .top-list .top-title .text:after, .filter .select:after, .question-list .identity:after, .popup .title .close:after, .popup .remark:after {
   content: '';
 }
 
@@ -538,4 +556,97 @@ body {
 
 .page .ellipsis {
   margin: 0 8px;
+}
+
+.popup {
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 700px;
+  height: 470px;
+  margin-top: -235px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #dcdcdc;
+  z-index: 13;
+}
+
+.popup .title {
+  height: 47px;
+  line-height: 47px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.popup .title .text {
+  padding-left: 20px;
+}
+
+.popup .title .close {
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  padding: 16px 20px;
+}
+
+.popup .title .close:before {
+  top: 23px;
+  left: 18px;
+  width: 20px;
+  height: 2px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.popup .title .close:after {
+  top: 23px;
+  left: 18px;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.popup .title .close:hover {
+  transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.popup .remark {
+  bottom: 20px;
+  left: 4.012%;
+  width: 91.978%;
+  height: 33px;
+  line-height: 33px;
+  padding-left: 8.74%;
+}
+
+.popup .remark:before {
+  top: 50%;
+  left: 4.985%;
+  width: 17px;
+  height: 17px;
+  margin-top: -8.5px;
+  border-radius: 50%;
+}
+
+.popup .remark:after {
+  top: 50%;
+  left: 6.231%;
+  width: 1px;
+  height: 8px;
+  margin-top: -5.5px;
 }

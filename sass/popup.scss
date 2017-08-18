@@ -1,0 +1,100 @@
+.popup {
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 700px;
+    height: 470px;
+    margin-top: -235px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #dcdcdc;
+    z-index: 13;
+    @extend %absolute;
+    @extend %bkgfff;
+    @extend %box-sizing;
+    
+    .title {
+        height: 47px;
+        line-height: 47px;
+        border-bottom: 1px solid #e0e0e0;
+        @extend %relative;
+        @extend %bkg696e76;
+        @extend %font-normal;
+        @extend %font-eighteen;
+        @extend %colorfff;
+        
+        .text {
+            padding-left: 20px;
+        }
+        
+        .close {
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            padding: 16px 20px;
+            @extend %absolute;
+            @extend %before;
+            @extend %after;
+            @extend %unbox-sizing;
+            
+            &:before {
+                top: 23px;
+                left: 18px;
+                width: 20px;
+                height: 2px;
+                @extend %bkgfff;
+                @include transform(-45);
+            }
+    
+            &:after {
+                top: 23px;
+                left: 18px;
+                width: 20px;
+                height: 2px;
+                @extend %bkgfff;
+                @include transform(45);
+            }
+            
+            &:hover {
+                @include transition(0.6);
+                @include transform(360);
+            }
+        }
+    }
+    
+    .remark {
+        bottom: 20px;
+        left: 4.012%;
+        width: 91.978%;
+        height: 33px;
+        line-height:33px;
+        padding-left: 8.74%;
+        @extend %absolute;
+        @extend %bkgfffde1;
+        @extend %font-fourteen;
+        @extend %color3a3a3a;
+        @extend %box-sizing;
+        @extend %before;
+        @extend %after;
+        
+        &:before {
+            top: 50%;
+            left: 4.985%;
+            width: 17px;
+            height: 17px;
+            margin-top: -8.5px;
+            border-radius: 50%;
+            @extend %bkgffd65a;
+        }
+    
+        &:after {
+            top: 50%;
+            left: 6.231%;
+            width: 1px;
+            height: 8px;
+            margin-top: -5.5px;
+            @extend %bkgfff;
+        }
+    }
+}
