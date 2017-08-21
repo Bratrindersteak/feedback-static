@@ -92,9 +92,9 @@
             top: 50%;
             left: 6.231%;
             width: 1px;
-            height: 8px;
-            margin-top: -5.5px;
-            @extend %bkgfff;
+            height: 1px;
+            border-top: 8px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
         }
     }
 }

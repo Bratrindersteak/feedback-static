@@ -1,9 +1,5 @@
 /*
-<<<<<<< HEAD
-Change by PengWu on 2017-08-16 16:00:04
-=======
-Change by PengWu on 2017-08-18 17:09:13
->>>>>>> 132968e31ad88ef88db6bd050fa3c211e4ad69ed
+Change by PengWu on 2017-08-21 10:53:55
 */
 body, input[type=text], textarea, input[type=submit], input[type=button], button {
   font-family: PingFang SC Regular, Microsoft Yahei, Arial;
@@ -150,7 +146,7 @@ a {
   font-weight: normal;
 }
 
-.main .container, .filter .list, .popup, .popup .title .close:before, .popup .title .close:after, .popup .remark:after {
+.main .container, .filter .list, .popup, .popup .title .close:before, .popup .title .close:after {
   background-color: #ffffff;
 }
 
@@ -647,6 +643,7 @@ body {
   top: 50%;
   left: 6.231%;
   width: 1px;
-  height: 8px;
-  margin-top: -5.5px;
+  height: 1px;
+  border-top: 8px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
