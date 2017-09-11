@@ -1,0 +1,54 @@
+.popup {
+    .native {
+        .item {
+            &:nth-last-child(2) {
+                width: 100%;
+                
+                .key {
+                    width: 17.5%;
+                }
+                
+                .value {
+                    width: 82.5%;
+                }
+            }
+            
+            &:nth-last-child(3) {
+                width: 100%;
+                
+                .key {
+                    width: 17.5%;
+                }
+                
+                .value {
+                    width: 82.5%;
+                }
+            }
+            
+            &:nth-last-child(4) {
+                top: 120px;
+                right: 0;
+                @extend %absolute;
+                
+                .wrapper {
+                    overflow: hidden;
+                    max-height: 100px;
+                    padding-top: 10px;
+                    @include multiRowEllipsis(5);
+                }
+            }
+            
+            &:nth-last-child(5) {
+                width: 100%;
+                
+                .key {
+                    width: 17.5%;
+                }
+                
+                .value {
+                    width: 82.5%;
+                }
+            }
+        }
+    }
+}

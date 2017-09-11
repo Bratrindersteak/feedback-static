@@ -1,0 +1,47 @@
+.popup {
+    .remark {
+        //bottom: 20px;
+        //left: 4.3%;
+        //width: 91.978%;
+        height: 36px;
+        line-height: 18px;
+        margin: 20px 4.3%;
+        //padding-left: 8.74%;
+        @extend %relative;
+        //@extend %bkgfffde1;
+        @extend %font-fourteen;
+        @extend %color3a3a3a;
+        //@extend %box-sizing;
+        @extend %before;
+        @extend %after;
+        
+        &:before {
+            top: 9px;
+            left: 1.985%;
+            width: 17px;
+            height: 17px;
+            //margin-top: -8.5px;
+            border-radius: 50%;
+            @extend %bkgffd65a;
+        }
+        
+        &:after {
+            top: 12px;
+            left: 3.231%;
+            width: 1px;
+            height: 1px;
+            //margin-top: -5.5px;
+            border-top: 8px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        .wrapper {
+            width: 100%;
+            padding: 5px 1.56% 5px 6.231%;
+            display: inline-block;
+            vertical-align: -50%;
+            @extend %bkgfffde1;
+            @extend %box-sizing;
+        }
+    }
+}

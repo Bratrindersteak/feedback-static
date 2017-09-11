@@ -79,7 +79,7 @@ gulp.task('compress:js', ['clean:js'], function() {
 gulp.task('sass-expanded', ['clean:css'], function() {
 	versionInfo();
 
-	return gulp.src('./sass/feedback.scss')
+	return gulp.src(['./sass/**/index.scss', '!./sass/variableLibrary.scss', '!./sass/reset.scss'], { base: 'sass/feedback' })
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 		.pipe(banner(version_info))
 		.pipe(gulp.dest('./src/css'));
@@ -88,14 +88,14 @@ gulp.task('sass-expanded', ['clean:css'], function() {
 gulp.task('sass-compressed', ['clean:css'], function() {
 	versionInfo();
 
-	return gulp.src('./sass/feedback.scss')
+	return gulp.src(['./sass/**/index.scss', '!./sass/variableLibrary.scss', '!./sass/reset.scss'], { base: 'sass/feedback' })
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(banner(version_info))
 		.pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('base64', ['sass-expanded', 'sass-compressed'], function () {
-    return gulp.src('./src/css/*.css')
+    return gulp.src('./src/css/**/*.css')
 		.pipe(base64())
 		.pipe(gulp.dest('./src/css'));
 });
@@ -177,7 +177,7 @@ gulp.task('default', ['compressHTML'], function() {
 	date = new Date();
 
 	gulp.watch(['./src/js/**/*.js', '!./src/js/lib/*'], ['revJs']);
-	gulp.watch('./sass/*.scss', ['revCss']);
+	gulp.watch('./sass/**/*.scss', ['revCss']);
 	gulp.watch('./src/img/*.{png,jpg,gif,ico}', ['revImgH', 'revImgC']);
 	gulp.watch('./src/**/*.html', ['compressHTML']);
 });

@@ -1,0 +1,94 @@
+.question-list {
+    li {
+        padding: 20px 0;
+        border-top: 1px solid #efefef;
+        @extend %flex-box;
+        
+        &:first-child {
+            border-top: none;
+        }
+    }
+    
+    .source {
+        width: 12.773%;
+        @extend %flex-elements-none;
+        @extend %font-fourteen;
+    }
+    
+    .equipment {
+        @extend %font-normal;
+        @extend %color3a3a3a;
+    }
+    
+    .version {
+        @extend %color999;
+    }
+    
+    .content {
+        width: 52.476%;
+        line-height: 24px;
+        @extend %flex-elements-none;
+        @extend %font-fourteen;
+    }
+    
+    .text {
+        height: 48px;
+        @extend %color3a3a3a;
+    }
+    
+    .info {
+        @extend %color999;
+    }
+    
+    .identity {
+        padding-right: 17px;
+        @extend %relative;
+        @extend %after;
+        
+        &:after {
+            top: 50%;
+            right: 0;
+            width: 1px;
+            height: 15px;
+            margin-top: -7.5px;
+            @extend %bkge6e6e6;
+        }
+    }
+    
+    .date {
+        padding-left: 11px;
+    }
+    
+    .time {
+        padding-left: 11px;
+    }
+    
+    .classify {
+        width: 16.238%;
+        @extend %flex-elements-none;
+    }
+    
+    .status {
+        width: 10.496%;
+        @extend %flex-elements-none;
+    }
+    
+    .operation {
+        width: 8.02%;
+        @extend %flex-elements-none;
+        
+        .btn {
+            width: 100%;
+            height: 33px;
+            line-height: 33px;
+            border: 1px solid #e0e0e0;
+            @extend %text-align;
+            @extend %bkgf9f9f9;
+            @extend %font-fourteen;
+            
+            &:last-child {
+                margin-top: 10px;
+            }
+        }
+    }
+}

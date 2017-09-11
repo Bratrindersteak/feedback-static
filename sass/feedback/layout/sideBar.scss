@@ -1,0 +1,122 @@
+.side-bar {
+    width: 10.83333333333333%;
+    height: 100%;
+    align-self: auto;
+    @extend %flex-elements-none;
+    @extend %bkg696e76;
+    
+    .top-title {
+        height: 51px;
+        line-height: 51px;
+        @extend %relative;
+        @extend %font-normal;
+        @extend %font-sixteen;
+        @extend %before;
+        @extend %pointer;
+        
+        &:hover {
+            @extend %bkgdd5a58;
+        }
+        
+        &:before {
+            top: 50%;
+            left: 15px;
+            width: 15px;
+            height: 15px;
+            margin-top: -7.5px;
+            z-index: 1;
+        }
+        
+        .text {
+            display: block;
+            padding-left: 29.45%;
+            @extend %relative;
+            @extend %after;
+            @extend %colorfff;
+            
+            &:after {
+                top: 50%;
+                right: -17px;
+                width: 0;
+                height: 0;
+                margin-top: -2px;
+                border-top: 4px solid #fff;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+            }
+        }
+    
+        .link {
+            display: block;
+            padding-left: 29.45%;
+            @extend %relative;
+            @extend %after;
+            @extend %colorfff;
+        
+            &:after {
+                top: 50%;
+                right: -17px;
+                width: 0;
+                height: 0;
+                margin-top: -2px;
+                border-top: 4px solid #fff;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+            }
+        }
+    
+        .active {
+            @extend %bkgdd5a58;
+        
+            &:hover {
+                @extend %bkgdd5a58;
+            }
+        }
+    }
+    
+    .icon-1 {
+        &:before {
+            background: url(#{$image_path}feedbackList-icon.png) no-repeat;
+            background-position: center center;
+            background-size: 15px 15px;
+        }
+    }
+    
+    .icon-2 {
+        &:before {
+            background: url(#{$image_path}im-icon.png) no-repeat;
+            background-position: center center;
+            background-size: 15px 15px;
+        }
+    }
+    
+    .icon-3 {
+        &:before {
+            background: url(#{$image_path}authority-icon.png) no-repeat;
+            background-position: center center;
+            background-size: 15px 15px;
+        }
+    }
+    
+    .second-title {
+        height: 41px;
+        line-height:41px;
+        @extend %text-align;
+        @extend %font-fourteen;
+        
+        @extend %pointer;
+        
+        &:hover {
+            @extend %bkg3d434d;
+        }
+        
+        .link {
+            display: block;
+            @extend %colorfff;
+        }
+        
+        .active {
+            @extend %bkg3d434d;
+        }
+    }
+}

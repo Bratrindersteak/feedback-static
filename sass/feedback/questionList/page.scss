@@ -1,0 +1,41 @@
+.page {
+    bottom: 30px;
+    right: 30px;
+    @extend %absolute;
+    @extend %flex-box;
+    
+    li {
+        height: 22px;
+        line-height:22px;
+        border: 1px solid #e0e0e0;
+        @extend %flex-elements-none;
+        @extend %text-align;
+        @extend %font-twelve;
+    }
+    
+    a {
+        display: block;
+        @extend %color3a3a3a;
+    }
+    
+    .up {
+        width: 48px;
+        margin-right: 2px;
+    }
+    
+    .down {
+        width: 48px;
+        margin-left: 2px;
+    }
+    
+    .num {
+        width: 22px;
+        margin: 0 2px;
+    }
+    
+    .ellipsis {
+        margin: 0 8px;
+        @extend %font-twelve;
+        @extend %color3a3a3a;
+    }
+}

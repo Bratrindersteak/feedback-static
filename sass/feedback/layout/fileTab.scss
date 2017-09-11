@@ -1,0 +1,61 @@
+.file-list {
+    @extend %flex-box;
+    @extend %relative;
+    @extend %after;
+    
+    &:after {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        //z-index: 1;
+        @extend %bkge0e0e0;
+    }
+    
+    .file {
+        width: 10.298%;
+        height: 32px;
+        line-height: 32px;
+        margin-right: 1%;
+        border: 1px solid #e0e0e0;
+        @extend %relative;
+        @extend %flex-elements-none;
+        @extend %text-center;
+        @extend %font-fourteen;
+        @extend %color3a3a3a;
+        @extend %pointer;
+        @extend %before;
+        @extend %after;
+        
+        &:before {
+            top: 15px;
+            right: 10px;
+            width: 11px;
+            height: 2px;
+            z-index: 1;
+            @extend %bkgb7b7b7;
+            @include transform(-45);
+        }
+        
+        &:after {
+            top: 15px;
+            right: 10px;
+            width: 11px;
+            height: 2px;
+            z-index: 1;
+            @extend %bkgb7b7b7;
+            @include transform(45);
+        }
+    }
+    
+    .active {
+        height: 30px;
+        border-top: 3px solid #dd5a58;
+        border-bottom: 1px solid #ffffff;
+        z-index: 1;
+    }
+    
+    .text {
+        padding-right: 25px;
+    }
+}

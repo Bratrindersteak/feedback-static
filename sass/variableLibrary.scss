@@ -46,7 +46,38 @@
 	-webkit-box-orient: vertical;
 }
 
+$ie6_hack: '_';
+$ie7_hack: '+';
+$ie8_hack: '\\9';
 $img-prefix: '../../';
+
+%fontFamily {
+	font-family: PingFang SC Regular, Microsoft Yahei, Arial;
+}
+
+%no-margin {
+	margin: 0;
+}
+
+%no-padding {
+	padding: 0;
+}
+
+%no-border {
+	border: 0;
+}
+
+%pointer {
+	cursor: pointer;
+}
+
+%webkit-appearance {
+	-webkit-appearance: none;
+}
+
+%btnClick {
+	-webkit-tap-highlight-color:transparent;
+}
 
 %float-left {
 	float: left;
@@ -571,6 +602,14 @@ $img-prefix: '../../';
 
 %bkgffd65a {
 	background-color: #ffd65a;
+}
+
+%bkge0e0e0 {
+	background-color: #e0e0e0;
+}
+
+%bkgb7b7b7 {
+	background-color: #b7b7b7;
 }
 
 %colorbebebe {

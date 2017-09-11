@@ -1,0 +1,51 @@
+.popup {
+    .title {
+        height: 47px;
+        line-height: 47px;
+        border-bottom: 1px solid #e0e0e0;
+        @extend %relative;
+        @extend %bkg696e76;
+        @extend %font-normal;
+        @extend %font-eighteen;
+        @extend %colorfff;
+        
+        .text {
+            padding-left: 20px;
+        }
+        
+        .close {
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            padding: 16px 20px;
+            @extend %absolute;
+            @extend %before;
+            @extend %after;
+            @extend %unbox-sizing;
+            
+            &:before {
+                top: 23px;
+                left: 18px;
+                width: 20px;
+                height: 2px;
+                @extend %bkgfff;
+                @include transform(-45);
+            }
+            
+            &:after {
+                top: 23px;
+                left: 18px;
+                width: 20px;
+                height: 2px;
+                @extend %bkgfff;
+                @include transform(45);
+            }
+            
+            &:hover {
+                @include transition(0.6);
+                @include transform(360);
+            }
+        }
+    }
+}

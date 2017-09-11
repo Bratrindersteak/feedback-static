@@ -1,0 +1,113 @@
+.filter {
+    overflow: visible;
+    margin: 20px 0;
+    @extend %flex-box;
+    @extend %font-zero;
+    
+    &:first-child {
+        margin-top: 30px;
+    }
+    
+    .name {
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        @extend %font-normal;
+        @extend %font-fourteen;
+        @extend %color3a3a3a;
+    }
+    
+    .select {
+        display: inline-block;
+        height: 33px;
+        line-height: 33px;
+        border: 1px solid #e0e0e0;
+        z-index: 1;
+        @extend %relative;
+        @extend %font-fourteen;
+        @extend %color999;
+        @extend %after;
+        
+        &:after {
+            top: 50%;
+            right: 5px;
+            width: 0;
+            height: 0;
+            margin-top: -2px;
+            border-top: 4px solid #999999;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+        }
+        
+        .text {
+            padding-left: 10px;
+        }
+    }
+    
+    .list {
+        top: 34px;
+        left: -1px;
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        @extend %absolute;
+        @extend %bkgfff;
+        
+        li {
+            padding-left: 10px;
+        }
+    }
+    
+    .property {
+        width: 47.526%;
+        @extend %flex-elements-none;
+        
+        .name {
+            width: 5.834%;
+        }
+        
+        .select {
+            width: 21.042%;
+            margin-left: 2.084%;
+        }
+    }
+    
+    .date {
+        width: 30.892%;
+        margin-left: 1.981%;
+        @extend %flex-elements-none;
+        
+        .name {
+            width: 20.513%;
+        }
+        
+        .select {
+            width: 33.975%;
+            @extend %font-twelve;
+        }
+        
+        .split {
+            display: inline-block;
+            width: 10.26%;
+            height: 35px;
+            line-height: 35px;
+            @extend %text-align;
+            @extend %font-normal;
+            @extend %font-fourteen;
+            @extend %color3a3a3a;
+        }
+    }
+    
+    .classify {
+        width: 39.11%;
+        
+        .name {
+            width: 14.18%;
+        }
+        
+        .select {
+            width: 25.57%;
+            margin-left: 2.532%;
+        }
+    }
+}

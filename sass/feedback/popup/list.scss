@@ -1,0 +1,85 @@
+.popup {
+    .list {
+        margin: 15px 4.3% 0;
+        @extend %relative;
+        @extend %flex-box;
+        
+        .item {
+            width: 50%;
+            //height: 40px;
+            line-height: 40px;
+            //@extend %flex-box;
+            align-self: auto;
+            @extend %flex-elements-none;
+            
+            &:last-child {
+                width: 100%;
+                
+                .key {
+                    width: 20%;
+                }
+                
+                .value {
+                    width: 53.296%;
+                }
+            }
+        }
+        
+        .key {
+            width: 40%;
+            @extend %float-left;
+            @extend %text-right;
+            @extend %font-normal;
+            @extend %font-fourteen;
+            @extend %color333;
+        }
+        
+        .value {
+            width: 60%;
+            line-height: 20px;
+            @extend %float-left;
+            @extend %text-left;
+            @extend %font-fourteen;
+            @extend %color333;
+        }
+        
+        .wrapper {
+            display: inline-block;
+            vertical-align: -50%;
+            word-break: break-all;
+        }
+        
+        .table {
+            border: 1px solid #dcdcdc;
+        }
+        
+        .tr {
+            height: 30px;
+            line-height:30px;
+            border-top: 1px solid #dcdcdc;
+            @extend %flex-box;
+            @extend %text-center;
+            @extend %font-fourteen;
+            @extend %color3a3a3a;
+            
+            &:first-child {
+                border-top: none;
+            }
+        }
+        
+        .th {
+            width: 50%;
+            @extend %flex-elements-none;
+            @extend %bkgf5f6f8;
+        }
+        
+        .td {
+            width: 50%;
+            @extend %flex-elements-none;
+        }
+        
+        .time {
+            padding-left: 9%;
+        }
+    }
+}
