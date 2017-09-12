@@ -1,0 +1,100 @@
+.im-user-list {
+    width: 16.27%;
+    border-right: 1px solid #e0e0e0;
+    
+    li {
+        height: 68px;
+        padding: 11px 0 11px 12.2%;
+        @extend %relative;
+        @extend %pointer;
+        @extend %box-sizing;
+    }
+    
+    .active {
+        @extend %bkgf7f7f7;
+    }
+    
+    .unread {
+        @extend %after;
+        
+        &:after {
+            top: 20px;
+            left: 4.88%;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            @extend %bkgdd5a58;
+        }
+    }
+    
+    .close {
+        top: 50%;
+        right: 0;
+        width: 9px;
+        height: 9px;
+        margin-top: -14px;
+        padding: 10px;
+        z-index: 1;
+        @extend %absolute;
+        @extend %before;
+        @extend %after;
+        @extend %pointer;
+    
+        &:before {
+            top: 14px;
+            right: 9px;
+            width: 11px;
+            height: 1px;
+            @extend %bkgb7b7b7;
+            @include transform(-45);
+        }
+        
+        &:after {
+            top: 14px;
+            right: 9px;
+            width: 11px;
+            height: 1px;
+            @extend %bkgb7b7b7;
+            @include transform(45);
+        }
+    
+        &:hover {
+            @include transition(0.6);
+            @include transform(360);
+            
+            &:before {
+                @extend %bkgdd5a58;
+            }
+            
+            &:after {
+                @extend %bkgdd5a58;
+            }
+        }
+    }
+    
+    .nick-name {
+        height: 23px;
+        line-height: 23px;
+        @extend %font-normal;
+        @extend %font-fourteen;
+        @extend %color3a3a3a;
+        @extend %single-row-ellipsis;
+    }
+    
+    .info {
+        height: 23px;
+        line-height: 23px;
+        @extend %font-zero;
+        
+        .id {
+            @extend %font-fourteen;
+            @extend %color3a3a3a;
+        }
+        
+        .time {
+            padding-left: 8.34%;
+            @extend %font-fourteen;
+            @extend %color999;
+        }
+    }
+}
