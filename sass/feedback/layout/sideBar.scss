@@ -1,8 +1,8 @@
 .side-bar {
+    flex: none;
+    align-self: auto;
     width: 10.83333333333333%;
     height: 100%;
-    align-self: auto;
-    @extend %flex-elements-none;
     @extend %bkg696e76;
     
     .top-title {

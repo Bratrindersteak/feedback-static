@@ -1,8 +1,9 @@
 .container {
+    flex: none;
+    align-self: auto;
     width: 89.16666666666667%;
     height: 100%;
     padding: 30px;
-    @extend %flex-elements-auto;
     @extend %bkgfff;
     @extend %box-sizing;
 }
