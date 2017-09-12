@@ -1,5 +1,5 @@
 /*
-Change by PengWu on 2017-09-11 18:56:39
+Change by PengWu on 2017-09-11 20:29:55
 */
 body, input[type=text], textarea, input[type=submit], input[type=button], button {
   font-family: PingFang SC Regular, Microsoft Yahei, Arial;
@@ -56,13 +56,8 @@ input[type=text], textarea, input[type=submit], input[type=button], button, inpu
   flex-flow: row wrap;
 }
 
-.side-bar, .file-list .file {
+.file-list .file {
   flex: none;
-  align-self: center;
-}
-
-.container {
-  flex: auto;
   align-self: center;
 }
 
@@ -276,9 +271,10 @@ body {
 }
 
 .side-bar {
+  flex: none;
+  align-self: auto;
   width: 10.83333333333333%;
   height: 100%;
-  align-self: auto;
 }
 
 .side-bar .top-title {
@@ -355,6 +351,8 @@ body {
 }
 
 .container {
+  flex: none;
+  align-self: auto;
   width: 89.16666666666667%;
   height: 100%;
   padding: 30px;
