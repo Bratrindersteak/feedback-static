@@ -4,4 +4,97 @@
     align-self: auto;
     border: 1px solid #e0e0e0;
     border-left: none;
+    
+    .user-info {
+        height: 67px;
+        @extend %flex-box;
+        @extend %bkgf7f7f7;
+        
+        .profile {
+            width: 22.67%;
+            flex: none;
+            align-self: auto;
+            padding: 3.384%;
+            @extend %box-sizing;
+        }
+        
+        img {
+            border-radius: 50%;
+        }
+        
+        .info {
+            width: 39.25%;
+            flex: none;
+            align-self: auto;
+            padding: 10px 0;
+            @extend %relative;
+        }
+        
+        .member {
+            top: 15px;
+            right: 0;
+            width: 30px;
+            height: 15px;
+            line-height: 15px;
+            @extend %absolute;
+            @extend %text-align;
+            @extend %bkgdd5a58;
+            @extend %font-twelve;
+            @extend %colorfff;
+        }
+        
+        .username {
+            height: 26px;
+            line-height: 26px;
+            @extend %font-normal;
+            @extend %font-fourteen;
+            @extend %color3a3a3a;
+            @extend %single-row-ellipsis;
+        }
+        
+        .devices {
+            height: 24px;
+            line-height: 24px;
+            @extend %font-twelve;
+            @extend %color999;
+        }
+        
+        .switch {
+            width: 37.892%;
+            flex: none;
+            align-self: auto;
+            padding: 0 3.384%;
+            @extend %box-sizing;
+        }
+        
+        .text {
+            line-height: 67px;
+            @extend %font-fourteen;
+            @extend %color3a3a3a;
+        }
+    }
+    
+    .message-list {
+        height: 353px;
+    }
+    
+    .write-box {
+        height: 126px;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .send-box {
+        height: 44px;
+        line-height: 44px;
+        border-top: 1px solid #e0e0e0;
+        
+        .tips {
+            @extend %font-fourteen;
+            @extend %color999;
+        }
+        
+        button {
+            
+        }
+    }
 }
