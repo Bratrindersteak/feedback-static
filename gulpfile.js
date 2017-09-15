@@ -79,7 +79,7 @@ gulp.task('compress:js', ['clean:js'], function() {
 gulp.task('sass-expanded', ['clean:css'], function() {
 	versionInfo();
 
-	return gulp.src(['./sass/**/index.scss', '!./sass/variableLibrary.scss', '!./sass/reset.scss'], { base: 'sass/feedback' })
+	return gulp.src(['./sass/**/dialogBox.scss', './sass/**/userList.scss', './sass/**/index.scss', '!./sass/variableLibrary.scss', '!./sass/reset.scss'], { base: 'sass/feedback' })
 		.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 		.pipe(banner(version_info))
 		.pipe(gulp.dest('./src/css'));
