@@ -170,8 +170,8 @@ $svg_path: '../../svg/';
             flex: none;
             align-self: auto;
             width: 50%;
-            height: 46px;
-            line-height: 46px;
+            height: 45px;
+            line-height: 45px;
             padding-left: 3.384%;
             @extend %font-fourteen;
             @extend %color999;
@@ -180,25 +180,27 @@ $svg_path: '../../svg/';
         .buttons {
             flex: none;
             align-self: auto;
+            height: 45px;
         }
         
         button {
             height: 25px;
-            line-height: 25px;
             margin: 10px;
             margin-left: 0;
-            padding: 0 10px;
             @extend %font-fourteen;
         }
         
         .send {
+            line-height: 23px;
             border: 1px solid #e0e0e0;
+            padding: 0 9px;
             @extend %bkgf9f9f9;
             @extend %color3a3a3a;
-            @extend %box-sizing;
         }
         
         .close {
+            line-height: 25px;
+            padding: 0 10px;
             @extend %bkgdd5a58;
             @extend %colorfff;
         }
