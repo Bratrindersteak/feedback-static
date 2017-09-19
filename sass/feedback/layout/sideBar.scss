@@ -20,10 +20,10 @@
         
         &:before {
             top: 50%;
-            left: 15px;
-            width: 15px;
-            height: 15px;
-            margin-top: -7.5px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
             z-index: 1;
         }
         
@@ -76,25 +76,25 @@
     
     .icon-1 {
         &:before {
-            background: url(#{$image_path}feedbackList-icon.png) no-repeat;
+            background: url(#{$svg_path}feedback.svg) no-repeat;
             background-position: center center;
-            background-size: 15px 15px;
+            background-size: auto 20px;
         }
     }
     
     .icon-2 {
         &:before {
-            background: url(#{$image_path}im-icon.png) no-repeat;
+            background: url(#{$svg_path}service.svg) no-repeat;
             background-position: center center;
-            background-size: 15px 15px;
+            background-size: auto 20px;
         }
     }
     
     .icon-3 {
         &:before {
-            background: url(#{$image_path}authority-icon.png) no-repeat;
+            background: url(#{$svg_path}authority.svg) no-repeat;
             background-position: center center;
-            background-size: 15px 15px;
+            background-size: auto 20px;
         }
     }
     
