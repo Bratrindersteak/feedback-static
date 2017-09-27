@@ -38,35 +38,35 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 input[type=text], textarea, input[type=submit], input[type=button], button {
-	outline: none;
+	//outline: none;
 	@extend %fontFamily;
-	@extend %no-padding;
-	@extend %no-border;
-	@extend %webkit-appearance;
-	@extend %btnClick;
+	//@extend %no-padding;
+	//@extend %no-border;
+	//@extend %webkit-appearance;
+	//@extend %btnClick;
 }
 
 img {
 	@extend %no-border;
 }
 
-textarea {
-	resize: none;
-	overflow-y: hidden;
-}
+//textarea {
+//	resize: none;
+//	overflow-y: hidden;
+//}
 
-input[type=submit], input[type=button], button {
-	background-color: transparent;
-	@extend %pointer;
-}
+//input[type=submit], input[type=button], button {
+//	background-color: transparent;
+//	@extend %pointer;
+//}
 
-input[type=file] {
-	@extend %btnClick;
-}
+//input[type=file] {
+//	@extend %btnClick;
+//}
 
-option {
-	@extend %no-padding;
-}
+//option {
+//	@extend %no-padding;
+//}
 
 i {
 	font-style: normal;
